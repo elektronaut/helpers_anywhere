@@ -1,0 +1,46 @@
+= HelpersAnywhere
+
+HelpersAnywhere is a Rails plugin that will let you access helpers 
+anywhere (hence the name).
+
+Warning: If you feel the need for this, you're quite possibly doing 
+it wrong.
+
+One use case would be to give you access to routing in rake tasks
+and mailers.
+
+== Installation
+
+ script/plugin install git://github.com/elektronaut/helpers_anywhere.git
+
+Then add the following line to your initializers:
+
+ HelpersAnywhere.default_domain = "mydomain.com"
+
+== Usage
+
+Examples:
+
+ include HelpersAnywhere
+
+ with_helper do
+   textilize "Hello world"
+   time_ago_in_words(2.days.ago)
+   users_url
+ end
+
+ helper.textilize("Hello world!")
+ helper.time_ago_in_words(2.days.ago)
+ helper.users_url
+
+You don't have to include the module:
+
+ HelpersAnywhere.helper.time_ago_in_words(10.minutes_ago) # => 10 minutes
+
+ HelpersAnywhere.with_helper do
+   users_url 
+ end
+
+== License
+
+Copyright (c) 2009 Inge Jørgensen, released under the MIT license
