@@ -1,11 +1,11 @@
 = HelpersAnywhere
 
 HelpersAnywhere is a Rails plugin that will let you access helpers 
-anywhere, hence the name. One use case would be to give you access
-to routing in your rake tasks and mailers.
+anywhere, hence the name. One use case would be to let you use the
+URL helpers in your rake tasks and mailers.
 
-Caveat emptor: If you feel the need for this, you're quite possibly doing 
-it wrong.
+Caveat emptor: If you feel the need for this, you're quite possibly 
+doing it wrong.
 
 == Installation
 
